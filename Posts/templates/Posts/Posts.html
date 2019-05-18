@@ -1,0 +1,10 @@
+{% block content %}
+    <center>
+        <h2>Publishers</h2>
+        <table>
+            {% for post in postsList %}
+            <tr><th>{{post.title}}</th></tr>
+            {% endfor %}
+        </table>
+    </center>
+{% endblock %}
