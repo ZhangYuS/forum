@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <center>
+            <h2>Posts</h2>
+            <p>{{postList}}</p>
+            <table>
+                {% for post in postsList %}
+                <tr><th><a href="{{post.id}}">{{post.title}}</a></th></tr>
+                {% endfor %}
+            </table>
+            <form method="post">
+                {% csrf_token %}
+                <div><input name="title" type="text"/></div>
+                <div><textarea name="content" rows="12"></textarea></div>
+                <input type="submit"/>
+            </form>
+        </center>
+    </body>
+</html>
