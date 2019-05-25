@@ -8,6 +8,7 @@
     <h2>{{posts.title}}</h2>
     <table border="1">
         <tr><th>用户</th><th>内容</th><th>时间</th></tr>
+            <tr><td>{{ post.author.name }}</td><td>{{ post.content }}</td><td>{{ post.createTime }}</td></tr>
         {% for a in replys %}
             <tr><td>{{ a.author.name }}</td><td>{{ a.content }}</td><td>{{ a.time }}</td></tr>
         {% endfor %}

@@ -8,6 +8,7 @@ class Post(models.Model):
     createTime = models.DateTimeField(default=datetime.datetime.now())
     modifyTime = models.DateTimeField(default=datetime.datetime.now())
     title = models.CharField(max_length=100)
+    content = models.CharField(max_length=20000, null=True)
 
     class Meta:
         db_table = "posts"

@@ -114,8 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hans'
-
 TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
@@ -154,5 +152,3 @@ CONFIG_DEFAULTS = {
     # Panel options
     'SQL_WARNING_THRESHOLD': 100,   # milliseconds
 }
-
-LOGIN_REDIRECT_URL = '/'
