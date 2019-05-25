@@ -37,13 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Users.apps.UsersConfig',
-    'Posts.apps.PostsConfig',
-    'Replys.apps.ReplysConfig',
+    'User.apps.UsersConfig',
+    'Post.apps.PostsConfig',
     'debug_toolbar',
 ]
 
-AUTH_USER_MODEL = 'Users.User'
+AUTH_USER_MODEL = 'User.User'
 
 MIDDLEWARE = [
 
@@ -155,3 +154,5 @@ CONFIG_DEFAULTS = {
     # Panel options
     'SQL_WARNING_THRESHOLD': 100,   # milliseconds
 }
+
+LOGIN_REDIRECT_URL = '/'

@@ -20,8 +20,8 @@ from django.conf import settings
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', include('Posts.urls')),
-    path('', include('Users.urls'))
+    path('', include('Post.urls')),
+    path('', include('User.urls'))
 ]
 
 if settings.DEBUG:

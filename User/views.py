@@ -7,6 +7,8 @@ class MyLoginView(LoginView):
     template_name = 'User/login.html'
 
 
+
+
 class RegisterView(FormView):
     template_name = 'User/register.html'
     form_class = RegisterForm

@@ -1,6 +1,6 @@
 from django.views.generic import ListView, DetailView
 from .models import Post
-from Replys.models import Reply
+from .models import Reply
 from django.utils import timezone
 
 class PostsList(ListView):
