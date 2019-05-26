@@ -1,6 +1,5 @@
-<html>
-    <body>
-        <center>
+{% extends 'base.html' %}
+{% block content %}
             <h2>Posts</h2>
             <p>{{postList}}</p>
             <table>
@@ -13,6 +12,4 @@
                 {{ form }}
                 <input type="submit"/>
             </form>
-        </center>
-    </body>
-</html>
+{% endblock %}

@@ -1,14 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form method="post" action="{% url 'User:Register' %}">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">注册</button>
-</form>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col s3 offset-s9">
+            <form method="post" class="card-panel" action="{% url 'User:Register' %}">
+                <div class="card-title" style="font-size: larger">注册</div>
+                <div class="card-content">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="input-field">
+                            {{ field }}
+                            <label for="{{ field.auto_id }}">{{ field.label }}</label>
+                        </div>
+                    {% endfor %}
+                    <div class="right-align">
+                        <button class="btn waves-effect waves-light black" type="submit" name="action">登陆
+                            <i class="material-icons right">send</i>
+                        </button>
+                        <button class="btn waves-effect waves-light black" type="button"
+                                onclick="window.location.href='{% url 'User:Login' %}'">注册
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
